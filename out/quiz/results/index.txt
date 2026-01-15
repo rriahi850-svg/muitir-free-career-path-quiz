@@ -1,0 +1,51 @@
+1:"$Sreact.fragment"
+2:I[9243,["874","static/chunks/874-f09823d35e5dcfc0.js","198","static/chunks/198-6e88f7f6c2ea5964.js","182","static/chunks/182-55c1d940be9270d6.js","177","static/chunks/app/layout-0d7cbbd8954536fe.js"],""]
+4:I[2379,["874","static/chunks/874-f09823d35e5dcfc0.js","198","static/chunks/198-6e88f7f6c2ea5964.js","182","static/chunks/182-55c1d940be9270d6.js","177","static/chunks/app/layout-0d7cbbd8954536fe.js"],"default"]
+5:I[5506,["874","static/chunks/874-f09823d35e5dcfc0.js","198","static/chunks/198-6e88f7f6c2ea5964.js","182","static/chunks/182-55c1d940be9270d6.js","177","static/chunks/app/layout-0d7cbbd8954536fe.js"],"default"]
+6:I[7555,[],""]
+7:I[1295,[],""]
+8:I[6874,["874","static/chunks/874-f09823d35e5dcfc0.js","974","static/chunks/app/page-d13e983e632c4f49.js"],""]
+9:I[7323,["874","static/chunks/874-f09823d35e5dcfc0.js","198","static/chunks/198-6e88f7f6c2ea5964.js","182","static/chunks/182-55c1d940be9270d6.js","177","static/chunks/app/layout-0d7cbbd8954536fe.js"],"Toaster"]
+a:I[894,[],"ClientPageRoot"]
+b:I[2218,["874","static/chunks/874-f09823d35e5dcfc0.js","198","static/chunks/198-6e88f7f6c2ea5964.js","935","static/chunks/app/quiz/results/page-1eb12e5a3389d563.js"],"default"]
+e:I[9665,[],"OutletBoundary"]
+11:I[4911,[],"AsyncMetadataOutlet"]
+13:I[9665,[],"ViewportBoundary"]
+15:I[9665,[],"MetadataBoundary"]
+17:I[6614,[],""]
+:HL["/_next/static/css/75880667223f3003.css","style"]
+3:T402,
+            // Prevent any notranslate meta tags
+            (function() {
+              // Remove existing notranslate
+              const notranslate = document.querySelector('meta[name="google"][content="notranslate"]');
+              if (notranslate) notranslate.remove();
+              
+              // Prevent future notranslate
+              const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                  if (mutation.type === 'childList') {
+                    mutation.addedNodes.forEach((node) => {
+                      if (node.nodeName === 'META' && 
+                          node.getAttribute('name') === 'google' &&
+                          node.getAttribute('content') === 'notranslate') {
+                        node.remove();
+                      }
+                    });
+                  }
+                });
+              });
+              
+              observer.observe(document.head, { childList: true });
+            })();
+          0:{"P":null,"b":"uVVsW4y4FwFFmLwZr18mB","p":"","c":["","quiz","results",""],"i":false,"f":[[["",{"children":["quiz",{"children":["results",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/75880667223f3003.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"es","className":"dark","children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/icon.png","type":"image/png"}],["$","meta",null,{"name":"google-site-verification","content":"googlea5f4f268f8b859da.html"}],["$","meta",null,{"httpEquiv":"Content-Language","content":"es"}]," ",["$","meta",null,{"name":"language","content":"Spanish"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap","rel":"stylesheet"}],["$","$L2",null,{"id":"adsense-script","async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID","crossOrigin":"anonymous","strategy":"afterInteractive"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6221954850003974","crossOrigin":"anonymous"}],["$","$L2",null,{"id":"chrome-translation-fix","strategy":"beforeInteractive","children":"$3"}]]}],["$","body",null,{"className":"font-body antialiased min-h-screen","children":[["$","$L4",null,{}],["$","$L5",null,{}]," ",["$","main",null,{"className":"pb-20","children":[" ",["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],["$","footer",null,{"className":"py-6 mt-12 border-t border-border/30","children":["$","div",null,{"className":"container mx-auto px-4","children":[["$","div",null,{"className":"flex flex-wrap justify-center gap-4 text-sm text-muted-foreground","children":[["$","$L8",null,{"href":"/careers","className":"hover:text-primary transition-colors","children":"Careers Database"}],["$","span",null,{"className":"text-border","children":"•"}],["$","$L8",null,{"href":"/privacy-policy","className":"hover:text-primary transition-colors","children":"Privacy Policy"}],["$","span",null,{"className":"text-border","children":"•"}],["$","$L8",null,{"href":"/terms","className":"hover:text-primary transition-colors","children":"Terms of Service"}],["$","span",null,{"className":"text-border","children":"•"}],["$","$L8",null,{"href":"/about","className":"hover:text-primary transition-colors","children":"About Us"}],["$","span",null,{"className":"text-border","children":"•"}],["$","$L8",null,{"href":"/contact","className":"hover:text-primary transition-colors","children":"Contact"}]]}],["$","p",null,{"className":"text-center text-xs text-muted-foreground/60 mt-4","children":["© ",2025," MuItir • Made in Tunisia 🇹🇳"]}]]}]}],["$","$L9",null,{}]]}]]}]]}],{"children":["quiz",["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["results",["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$La",null,{"Component":"$b","searchParams":{},"params":{},"promises":["$@c","$@d"]}],null,["$","$Le",null,{"children":["$Lf","$L10",["$","$L11",null,{"promise":"$@12"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","0LovK2hBuWaFmPJ3HuMVBv",{"children":[["$","$L13",null,{"children":"$L14"}],null]}],["$","$L15",null,{"children":"$L16"}]]}],false]],"m":"$undefined","G":["$17","$undefined"],"s":false,"S":true}
+18:"$Sreact.suspense"
+19:I[4911,[],"AsyncMetadata"]
+c:{}
+d:{}
+16:["$","div",null,{"hidden":true,"children":["$","$18",null,{"fallback":null,"children":["$","$L19",null,{"promise":"$@1a"}]}]}]
+10:null
+14:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+f:null
+12:{"metadata":[["$","title","0",{"children":"Muitir Career Path Quiz : Find your ideal future with our efficient and simple personalized quiz."}],["$","meta","1",{"name":"description","content":"To revolutionize career discovery by moving beyond generic personality tests. We match individuals with careers based on a unique combination of personality type, passion domains, and work preferences — all encoded in your personal Career Code."}],["$","meta","2",{"name":"application-name","content":"MuItir"}],["$","meta","3",{"property":"og:title","content":"Muitir Career Path Quiz : Find your ideal future with our efficient and simple personalized quiz."}],["$","meta","4",{"property":"og:description","content":"To revolutionize career discovery by moving beyond generic personality tests. We match individuals with careers based on a unique combination of personality type, passion domains, and work preferences — all encoded in your personal Career Code."}],["$","meta","5",{"property":"og:site_name","content":"MuItir"}],["$","meta","6",{"name":"twitter:card","content":"summary"}],["$","meta","7",{"name":"twitter:title","content":"Muitir Career Path Quiz : Find your ideal future with our efficient and simple personalized quiz."}],["$","meta","8",{"name":"twitter:description","content":"To revolutionize career discovery by moving beyond generic personality tests. We match individuals with careers based on a unique combination of personality type, passion domains, and work preferences — all encoded in your personal Career Code."}],["$","link","9",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"32x32"}]],"error":null,"digest":"$undefined"}
+1a:{"metadata":"$12:metadata","error":null,"digest":"$undefined"}

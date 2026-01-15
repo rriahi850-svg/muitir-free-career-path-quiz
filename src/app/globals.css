@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 227 43% 17%;
+    --foreground: 210 40% 98%;
+    --card: 227 43% 22%;
+    --card-foreground: 210 40% 98%;
+    --popover: 227 43% 17%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 220 33% 5%;
+    --secondary: 227 43% 32%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 227 43% 32%;
+    --muted-foreground: 210 40% 80%;
+    --accent: 227 43% 42%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 227 43% 32%;
+    --input: 227 43% 32%;
+    --ring: 210 40% 98%;
+    --radius: 0.5rem;
+    --gradient-end: 228,36%,5%;
+    
+  }
+
+  [data-theme='C'] {
+    --background: 280 80% 20%;
+    --foreground: 316 75% 65%;
+    --card: 300 50% 15%;
+    --primary: 316 75% 65%;
+    --secondary: 300 20% 85%;
+    --border: 316 75% 65%;
+    --accent: 316 75% 65%;
+    --accent-foreground: 280 80% 20%;
+    --gradient-end: 280 80% 20%; /* Match background */
+  }
+  
+  [data-theme='P'] {
+    --background: 130 80% 20%;
+    --foreground: 145 63% 49%;
+    --card: 140 50% 15%;
+    --primary: 145 63% 49%;
+    --secondary: 140 20% 85%;
+    --border: 145 63% 49%;
+    --accent: 145 63% 49%;
+    --accent-foreground: 130 80% 20%;
+    --gradient-end: 130 80% 20%; /* Match background */
+
+  }
+  
+  [data-theme='S'] {
+    --background: 190 80% 20%;
+    --foreground: 204 91% 58%;
+    --card: 200 50% 15%;
+    --primary: 204 91% 58%;
+    --secondary: 200 20% 85%;
+    --border: 204 91% 58%;
+    --accent: 204 91% 58%;
+    --accent-foreground: 190 80% 20%;
+    --gradient-end: 190 80% 20%; /* Match background */  
+  }
+  
+  [data-theme='N'] {
+    --background: 210 10% 23%;
+    --foreground: 215 14% 70%;
+    --card: 215 15% 25%;
+    --primary: 215 14% 70%;
+    --secondary: 210 10% 65%;
+    --border: 215 14% 70%;
+    --accent: 215 14% 70%;
+    --accent-foreground: 210 10% 23%;
+    --gradient-end: 210 10% 23%; /* Match background */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    position: relative;
+    background-attachment: fixed;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+    background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--gradient-end)));
+  }
+  body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--gradient-end)));
+  z-index: -1;
+  pointer-events: none;
+}
+  
+  html {
+    height: 100%;
+  }
+}
+
+@layer components {
+  .theme-transition {
+    transition: all 0.3s ease;
+  }
+}
+
