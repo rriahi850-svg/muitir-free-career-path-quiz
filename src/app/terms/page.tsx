@@ -7,7 +7,7 @@ export default function TermsPage() {
   return (
       <main className="min-h-screen bg-gradient-to-b from-background via-background to-background/95 p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
-        {/* Header - FIXED FOR MOBILE */}
+        
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 md:gap-0">
           <div className="flex items-center gap-3 order-2 md:order-1">
             <div className="p-2 rounded-xl bg-primary/10 border border-primary/20">
@@ -26,7 +26,7 @@ export default function TermsPage() {
               </p>
             </div>
           </div>
-           {/* Button on mobile - full width, on desktop back to corner */}
+           
           <div className="order-1 md:order-2 ">
             <div className="md:hidden">
     <Button 
@@ -56,7 +56,7 @@ export default function TermsPage() {
           </div>
         </div>
 
-        {/* Disclaimer */}
+        
         <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-4 mb-8">
           <div className="flex items-start gap-3">
             <AlertTriangle className="h-5 w-5 text-yellow-500 mt-0.5" />
@@ -69,7 +69,7 @@ export default function TermsPage() {
           </div>
         </div>
 
-        {/* Terms Content */}
+        
         <div className="bg-card/40 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-border/50 shadow-xl shadow-primary/5 space-y-8">
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
@@ -238,7 +238,7 @@ export default function TermsPage() {
           </section>
         </div>
 
-        {/* Acceptance Note */}
+        
         <div className="mt-8 text-center text-sm text-muted-foreground">
           <p>By using MuItir, you acknowledge that you have read, understood, and agree to these Terms of Service.</p>
         </div>
