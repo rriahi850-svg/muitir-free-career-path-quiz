@@ -37,7 +37,7 @@
     --border: 316 75% 65%;
     --accent: 316 75% 65%;
     --accent-foreground: 280 80% 20%;
-    --gradient-end: 280 80% 20%; /* Match background */
+    --gradient-end: 280 80% 20%; 
   }
   
   [data-theme='P'] {
@@ -49,7 +49,7 @@
     --border: 145 63% 49%;
     --accent: 145 63% 49%;
     --accent-foreground: 130 80% 20%;
-    --gradient-end: 130 80% 20%; /* Match background */
+    --gradient-end: 130 80% 20%; 
 
   }
   
@@ -62,7 +62,7 @@
     --border: 204 91% 58%;
     --accent: 204 91% 58%;
     --accent-foreground: 190 80% 20%;
-    --gradient-end: 190 80% 20%; /* Match background */  
+    --gradient-end: 190 80% 20%; 
   }
   
   [data-theme='N'] {
@@ -74,7 +74,7 @@
     --border: 215 14% 70%;
     --accent: 215 14% 70%;
     --accent-foreground: 210 10% 23%;
-    --gradient-end: 210 10% 23%; /* Match background */
+    --gradient-end: 210 10% 23%; 
   }
 
   * {
