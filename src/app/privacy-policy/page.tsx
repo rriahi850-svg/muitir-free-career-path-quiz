@@ -7,7 +7,6 @@ export default function PrivacyPolicy() {
   return (
       <main className="min-h-screen bg-gradient-to-b from-background via-background to-background/95 p-4 md:p-8">
     <div className="max-w-4xl mx-auto">
-      {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 md:gap-0">
         <div className="flex items-center gap-3 order-2 md:order-1">
           <div className="p-2 rounded-xl bg-primary/10 border border-primary/20">
@@ -26,7 +25,6 @@ export default function PrivacyPolicy() {
             </p>
           </div>
         </div>
-        {/* Button on mobile - full width, on desktop back to corner */}
           <div className="order-1 md:order-2 ">
             <div className="md:hidden">
     <Button 
@@ -56,7 +54,6 @@ export default function PrivacyPolicy() {
           </div>
         </div>
 
-        {/* Tunisia Notice - IMPORTANT for AdSense */}
         <div className="bg-gradient-to-r from-red-500/10 to-red-500/5 border border-red-500/30 rounded-2xl p-4 mb-8">
           <div className="flex items-center gap-3">
             <div className="text-2xl">🇹🇳</div>
@@ -68,10 +65,7 @@ export default function PrivacyPolicy() {
             </div>
           </div>
         </div>
-
-        {/* Privacy Policy Content */}
         <div className="bg-card/40 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-border/50 shadow-xl shadow-primary/5 space-y-8">
-          
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">1. Information We Collect</h2>
             <div className="space-y-4 text-muted-foreground">
@@ -243,9 +237,6 @@ export default function PrivacyPolicy() {
             </div>
           </section>
         </div>
-
-        {/* Navigation Footer */}
-
       </div>
     </main>
   );
