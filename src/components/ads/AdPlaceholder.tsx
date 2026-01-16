@@ -1,4 +1,3 @@
-// components/ads/AdPlaceholder.tsx
 interface AdPlaceholderProps {
   format: 'rectangle' | 'leaderboard';
   className?: string;
