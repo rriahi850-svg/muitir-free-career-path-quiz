@@ -1,4 +1,3 @@
-// components/ads/PreResultsAdOverlay.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -15,12 +14,9 @@ export default function PreResultsAdOverlay({ slotId, onClose }: PreResultsAdOve
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Auto-close after 12 seconds (prevents blocking results)
     const autoCloseTimer = setTimeout(() => {
       handleClose();
-    }, 12000); // 12 seconds
-
-    // Load AdSense after component mounts
+    }, 12000);
     const loadTimer = setTimeout(() => {
       if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
         try {
@@ -40,22 +36,19 @@ export default function PreResultsAdOverlay({ slotId, onClose }: PreResultsAdOve
 
   const handleClose = () => {
     setShowAd(false);
-    setTimeout(onClose, 300); // Wait for fade out animation
+    setTimeout(onClose, 300);
   };
 
   if (!showAd) return null;
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      {/* Blurred background */}
       <div 
         className="absolute inset-0 bg-background/80 backdrop-blur-lg"
         onClick={handleClose}
       />
       
-      {/* Ad container */}
       <div className="relative z-10 bg-card/90 backdrop-blur-sm rounded-2xl p-6 border-2 border-primary/30 shadow-2xl max-w-md w-full animate-in zoom-in-95 duration-300">
-        {/* Close button */}
         <Button
           variant="ghost"
           size="icon"
@@ -64,16 +57,12 @@ export default function PreResultsAdOverlay({ slotId, onClose }: PreResultsAdOve
         >
           <X className="h-4 w-4" />
         </Button>
-        
-        {/* Header */}
         <div className="text-center mb-4">
           <h3 className="text-lg font-bold text-foreground">Quick Support for Our Free Service</h3>
           <p className="text-sm text-muted-foreground mt-1">
             Your results are ready! A quick ad helps keep this career assessment free.
           </p>
         </div>
-        
-        {/* Ad slot */}
         <div className="relative min-h-[250px] bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20 overflow-hidden">
           {!isLoaded && (
             <div className="absolute inset-0 flex items-center justify-center">
@@ -83,21 +72,17 @@ export default function PreResultsAdOverlay({ slotId, onClose }: PreResultsAdOve
               </div>
             </div>
           )}
-          
-          {/* Actual AdSense ad */}
           <div className={`transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
             <ins
               className="adsbygoogle"
               style={{ display: 'block', width: '300px', height: '250px' }}
-              data-ad-client="ca-pub-YOUR_PUBLISHER_ID" // Replace with your ID
+              data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
               data-ad-slot={slotId}
               data-ad-format="auto"
               data-full-width-responsive="true"
             ></ins>
           </div>
-        </div>
-        
-        {/* Footer */}
+        </div> 
         <div className="mt-4 text-center">
           <p className="text-xs text-muted-foreground">
             Ads support free access to career guidance
