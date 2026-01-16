@@ -4,16 +4,6 @@ export type Career = {
   description: string;
   benefits: string[];
 };
-
-// This list is intentionally left empty as per the user's request.
-// The user will add their own job data here.
-// Example format:
-// {
-//   code: 'C110112...',
-//   title: 'Graphic Designer',
-//   description: 'A summary of why this job fits the code...',
-//   benefits: ['Creative Freedom', 'Flexible Hours', 'High Demand']
-// }
 export const careers: Career[] = [
   {
     code: "S1110121111200111111100120200011010",
