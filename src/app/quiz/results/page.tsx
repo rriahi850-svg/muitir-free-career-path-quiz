@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { AlertTriangle, Loader2 } from 'lucide-react';
-import PreResultsAdOverlay from '@/components/ads/PreResultsAdOverlay'; // NEW IMPORT
+import PreResultsAdOverlay from '@/components/ads/PreResultsAdOverlay'; 
 
 function ErrorDisplay({ message }: { message: string }) {
   return (
@@ -40,7 +40,6 @@ function LoadingDisplay() {
   );
 }
 
-// FALLBACK CAREER (in case no match found)
 const getFallbackCareer = (userType: string): any => {
   const typeMap = {
     'C': {
@@ -77,12 +76,10 @@ export default function ResultsPage() {
   const [userCode, setUserCode] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [showAdOverlay, setShowAdOverlay] = useState(true); // NEW STATE
-
+  const [showAdOverlay, setShowAdOverlay] = useState(true); 
   useEffect(() => {
     console.log('ResultsPage: Starting match process...');
     
-    // Get the user's code from localStorage
     const resultCode = localStorage.getItem('quizResultCode');
     console.log('Retrieved code from localStorage:', resultCode);
     
@@ -95,10 +92,8 @@ export default function ResultsPage() {
     
     setUserCode(resultCode);
     
-    // Clear the code from localStorage
     
     
-    // Validate the code format
     if (resultCode.length < 15) {
       console.error('Invalid code length:', resultCode.length);
       setError("Invalid quiz results. Please take the quiz again.");
@@ -106,7 +101,6 @@ export default function ResultsPage() {
       return;
     }
     
-    // Find the best career match
     console.log('Calling findBestMatch with code:', resultCode);
     console.log('Number of careers available:', careers.length);
     
@@ -116,12 +110,10 @@ export default function ResultsPage() {
       
       if (!career) {
         console.warn('No match found, using fallback');
-        // Use fallback based on user type
         const userType = resultCode[0];
         const fallback = getFallbackCareer(userType);
         setMatchedCareer(fallback);
       } else {
-        // Verify career has required properties
         if (!career.title || !career.description) {
           console.error('Career missing properties:', career);
           const userType = resultCode[0];
@@ -155,7 +147,6 @@ export default function ResultsPage() {
     return <ErrorDisplay message="No career match found. Please try the quiz again." />;
   }
   
-  // Debug log before rendering
   console.log('Rendering with:', {
     hasCareer: !!matchedCareer,
     title: matchedCareer?.title,
@@ -165,15 +156,12 @@ export default function ResultsPage() {
   
   return (
     <>
-      {/* Pre-results Ad Overlay - Shows before results */}
       {showAdOverlay && (
         <PreResultsAdOverlay
-          slotId="YOUR_PRE_RESULTS_AD_SLOT" // Replace with your actual AdSense slot ID
+          slotId="YOUR_PRE_RESULTS_AD_SLOT" 
           onClose={() => setShowAdOverlay(false)}
         />
       )}
-      
-      {/* Main Results Display - Shows after ad overlay is closed */}
       {!showAdOverlay && (
         <div 
           className="flex items-center justify-center min-h-screen p-4 md:p-8 bg-gradient-to-br from-background to-secondary/20 animate-fade-in"
@@ -183,7 +171,6 @@ export default function ResultsPage() {
             career={matchedCareer} 
             code={userCode || matchedCareer.code} 
           />
-          {/* NO AD HERE - Removed completely */}
         </div>
       )}
     </>
