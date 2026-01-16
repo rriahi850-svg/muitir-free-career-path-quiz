@@ -10,12 +10,10 @@ export default function ProcessingPage() {
   const [showAd, setShowAd] = useState(true);
 
   useEffect(() => {
-    // Get the code from localStorage instead of URL
     const code = localStorage.getItem('quizResultCode');
     
     const timer = setTimeout(() => {
       if (code) {
-        // No need to pass code in URL anymore
         router.push('/quiz/results');
       } else {
         router.push('/');
