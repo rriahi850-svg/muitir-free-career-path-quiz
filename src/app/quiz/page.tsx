@@ -65,17 +65,12 @@ export default function QuizPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* DESKTOP: Keep original positioning */}
       <div className="absolute top-4 left-2 z-20 hidden md:block">
         <EnhancedBackButton />
 
       </div>
-      
-      {/* MOBILE: Separate layout */}
       <div className="md:hidden absolute top-[100px] left-0  z-20 w-12 h-12 flex items-center justify-between">
         <EnhancedBackButton />
-      
-        {/* Empty div for spacing balance */}
         <div className="w-10"></div>
       </div>
       
