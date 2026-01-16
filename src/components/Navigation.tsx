@@ -1,4 +1,3 @@
-// components/Navigation.tsx - UPDATED WITH YOUR LOGO
 'use client';
 
 import { useState } from 'react';
@@ -31,7 +30,6 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Floating Menu Button */}
       <Button
         variant="ghost"
         size="icon"
@@ -46,10 +44,6 @@ export default function Navigation() {
       >
         {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </Button>
-
-      {/* Logo in Top Left */}
-
-      {/* Navigation Menu */}
       {isOpen && (
         
         <div className="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm" onClick={() => setIsOpen(false)}>
@@ -83,8 +77,6 @@ export default function Navigation() {
                     )}
                   </Link>
                 ))}
-                
-                {/* Divider */}
                 <div className="my-2 border-t border-border/30"></div>
                 
               
