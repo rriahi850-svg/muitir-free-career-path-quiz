@@ -15,7 +15,6 @@ import { getRelatedCareers } from '@/lib/related-careers';
 
 
 
-// SVG for Threads Icon
 const ThreadsIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
@@ -38,7 +37,6 @@ const ThreadsIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-// SVG for Instagram Icon
 const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
       {...props}
@@ -71,7 +69,6 @@ export default function ResultsDisplay({ career, code }: ResultsDisplayProps) {
 
   useEffect(() => {
     setPageUrl(window.location.href);
-    // Apply theme to entire document
     document.documentElement.setAttribute('data-theme', personalityType);
     
       if (typeof window !== 'undefined' && window.gtag) {
@@ -81,7 +78,6 @@ export default function ResultsDisplay({ career, code }: ResultsDisplayProps) {
     });
   }
       return () => {
-      // Reset to default theme when component unmounts
       document.documentElement.removeAttribute('data-theme');
     };
   }, [personalityType, career.title]);
