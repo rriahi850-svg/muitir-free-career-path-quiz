@@ -1,4 +1,3 @@
-// components/ads/AdSensePlacement.tsx
 'use client';
 
 import { useEffect } from 'react';
@@ -20,9 +19,7 @@ export default function AdSensePlacement({
   useEffect(() => {
     const loadAd = () => {
       try {
-        // Check if AdSense is already loaded
         if (typeof window !== 'undefined') {
-          // Initialize AdSense
           ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
         }
       } catch (error) {
@@ -30,7 +27,6 @@ export default function AdSensePlacement({
       }
     };
 
-    // Small delay to ensure DOM is ready
     const timer = setTimeout(loadAd, 100);
     return () => clearTimeout(timer);
   }, [slotId]);
@@ -60,7 +56,7 @@ export default function AdSensePlacement({
         <ins
           className="adsbygoogle"
           style={styles[format]}
-          data-ad-client="ca-pub-YOUR_PUBLISHER_ID" // ← Replace with your ID
+          data-ad-client="ca-pub-YOUR_PUBLISHER_ID" 
           data-ad-slot={slotId}
           data-ad-format={format === 'auto' ? 'auto' : undefined}
           data-full-width-responsive="true"
