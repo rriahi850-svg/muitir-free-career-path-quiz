@@ -1,4 +1,3 @@
-// /lib/related-careers.ts
 export const relatedCareers = {
   // HIGH-DEMAND MEDICAL & HEALTHCARE
   "Orthodontist": [
