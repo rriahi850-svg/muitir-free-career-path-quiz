@@ -32,7 +32,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // ↓ THIS IS THE NEW LINE ↓
   skipTrailingSlashRedirect: true,
 };
 
