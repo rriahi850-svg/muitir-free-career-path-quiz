@@ -1,4 +1,3 @@
-// components/quiz/EnhancedBackButton.tsx - UPDATED
 'use client';
 import { ArrowLeft, Undo2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -16,8 +15,8 @@ export default function EnhancedBackButton({
   showReset = true 
 }: EnhancedBackButtonProps) {
   const router = useRouter();
-  const pathname = usePathname(); // ADD THIS
-  const isQuizPage = pathname.includes('/quiz'); // ADD THIS
+  const pathname = usePathname(); 
+  const isQuizPage = pathname.includes('/quiz'); 
 
   if (!isQuizPage) {
     return (
@@ -55,19 +54,14 @@ export default function EnhancedBackButton({
   const handleResetCurrent = () => {
     resetCurrentAnswer();
   };
-
-  // Check if current question has been answered
   const hasCurrentAnswer = () => {
     const currentQuestion = getCurrentQuestion();
     if (!currentQuestion) return false;
-    
-    // Simple check: if we have any answers and we're past the first question
     return answers.length > 0 && (mainQuestionIndex > 0 || simpleQuestionIndex >= 0);
   };
 
   return (
     <div className="absolute top-12.5 left-4 z-50 w-12 h-12 flex items-center gap-2">
-      {/* Main Back Button */}
       <Button
         variant="ghost"
         size="icon"
@@ -78,10 +72,6 @@ export default function EnhancedBackButton({
         <ArrowLeft className="h-6 w-6 group-hover:-translate-x-0.5 transition-transform" />
         <span className="sr-only">Go Back</span>
       </Button>
-
-      
-      
-      {/* REMOVED: Question counter badge */}
     </div>
   );
 }
