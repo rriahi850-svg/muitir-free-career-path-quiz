@@ -7,7 +7,6 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-background via-background to-background/95 p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -29,8 +28,6 @@ export default function AboutPage() {
             </Link>
           </Button>
         </div>
-
-        {/* Hero Section */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-card/40 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-border/50 shadow-xl shadow-primary/5">
             <div className="flex items-center gap-3 mb-6">
@@ -56,8 +53,6 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-
-        {/* How It Works Section */}
         <div className="mb-16">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-foreground mb-3">How Our System Works</h2>
@@ -96,8 +91,6 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-
-        {/* Stats Section */}
         <div className="bg-card/30 rounded-3xl p-8 mb-16 border border-border/50">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
@@ -118,8 +111,6 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-
-        {/* Founder Section */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
             <Users className="h-8 w-8 text-primary" />
@@ -134,8 +125,6 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-
-        {/* CTA Section */}
         <div className="text-center">
           <div className="inline-block bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8 border border-primary/20">
             <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Discover Your Career Code?</h3>
