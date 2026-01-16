@@ -15,7 +15,7 @@ openGraph: {
 },
 };
 
-// app/layout.tsx - Add this component
+
 function LegalFooter() {
   return (
     <footer className="py-6 mt-12 border-t border-border/30">
@@ -23,7 +23,7 @@ function LegalFooter() {
         <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
           <Link 
             href="/careers" 
-            className="hover:text-primary transition-colors" // ← ADD THIS
+            className="hover:text-primary transition-colors" 
           >
             Careers Database
           </Link>
@@ -78,7 +78,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.png" type="image/png" />
         <meta name="google-site-verification" content="googlea5f4f268f8b859da.html" />
-        <meta httpEquiv="Content-Language" content="es" /> {/* Match the html lang */}
+        <meta httpEquiv="Content-Language" content="es" /> 
         <meta name="language" content="Spanish" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -129,8 +129,8 @@ export default function RootLayout({
       <body className="font-body antialiased min-h-screen">
       <ForceLanguage />
  
-        <Navigation /> {/* ← ADD HEADER HERE */}
-        <main className="pb-20"> {/* Add bottom padding for bottom nav */}
+        <Navigation /> 
+        <main className="pb-20"> 
           {children}
         </main>
         <LegalFooter />
