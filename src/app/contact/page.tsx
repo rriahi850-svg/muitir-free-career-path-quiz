@@ -19,15 +19,10 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission - Replace with your actual form handling
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
     setSubmitStatus('success');
     setIsSubmitting(false);
     setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    // Reset success message after 5 seconds
     setTimeout(() => setSubmitStatus('idle'), 5000);
   };
 
@@ -41,7 +36,6 @@ export default function ContactPage() {
   return (
   <main className="min-h-screen bg-gradient-to-b from-background via-background to-background/95 p-4 md:p-8">
     <div className="max-w-4xl mx-auto">
-      {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 md:mb-12 gap-4 md:gap-0">
         <div className="flex items-center gap-3 order-2 md:order-1">
           <div className="p-2 rounded-xl bg-primary/10 border border-primary/20">
@@ -56,7 +50,6 @@ export default function ContactPage() {
             </p>
           </div>
         </div>
-        {/* Button on mobile - full width, on desktop back to corner */}
           <div className="order-1 md:order-2 ">
             <div className="md:hidden">
     <Button 
@@ -87,7 +80,6 @@ export default function ContactPage() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* Contact Info Cards */}
           <div className="md:col-span-1 space-y-6">
             <div className="bg-card/40 backdrop-blur-sm rounded-2xl p-6 border border-border/50">
               <div className="flex items-center gap-3 mb-4">
@@ -127,8 +119,6 @@ export default function ContactPage() {
               <p className="text-primary font-medium mt-2">24-48 hours</p>
             </div>
           </div>
-
-          {/* Contact Form */}
           <div className="md:col-span-2">
             <div className="bg-card/40 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-border/50 shadow-xl shadow-primary/5">
               <h2 className="text-2xl font-bold text-foreground mb-6">Send us a message</h2>
@@ -238,10 +228,7 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-        </div>
-
-        {/* FAQ Section */}
-  
+        </div>  
 <div className="bg-card/30 rounded-3xl p-8 mb-12 border border-border/50">
   <h2 className="text-2xl font-bold text-foreground mb-6">Common Questions</h2>
   <div className="space-y-6">
@@ -278,8 +265,6 @@ export default function ContactPage() {
         Different answers = different codes = different career suggestions!
       </p>
     </div>
-    
-    {/* ADD THIS NEW SECTION - Honest about being new */}
     <div className="mt-6 pt-6 border-t border-border/30">
       <div className="flex items-start gap-3">
         <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
