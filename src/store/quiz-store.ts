@@ -1,4 +1,3 @@
-// store/quiz-store.ts - COMPLETE FIXED VERSION
 import { create } from 'zustand';
 import { questions, MainPassionQuestion, Question, SimplePassionQuestion } from '@/lib/questions';
 
@@ -85,9 +84,7 @@ export const useQuizStore = create<QuizState>((set, get) => ({
 
     let currentAnswers = [...get().answers];
     const currentMainIndex = get().mainQuestionIndex;
-    const currentSimpleIndex = get().simpleQuestionIndex;
-    
-    // Add to answer history
+    const currentSimpleIndex = get().simpleQuestionIndex;   
     set(state => ({
       answerHistory: [
         ...state.answerHistory,
@@ -174,77 +171,56 @@ export const useQuizStore = create<QuizState>((set, get) => ({
   getProgress: () => {
     const { mainQuestionIndex, simpleQuestionIndex, isCompleted, answers } = get();
     
-    if (isCompleted) return 100;
-    
-    // Calculate total questions for current path
-    let totalForPath = 1; // Type question
-    
-    // Add main passion questions
+    if (isCompleted) return 100;  
+    let totalForPath = 1;
     for (let i = 0; i < questions.length; i++) {
       const question = questions[i];
-      if (question.type === 'type') continue; // Already counted
+      if (question.type === 'type') continue;
       
       if (question.type === 'mainPassion') {
-        // Check if we've answered this question
         if (i < mainQuestionIndex) {
           const answer = answers[i];
           if (answer === '1') {
-            // Answered "Yes" - count main + 5 simple questions
-            totalForPath += 1 + 5; // Main + 5 simple
+            totalForPath += 1 + 5;
           } else {
-            // Answered "No" or "Not Sure" - count only main question
             totalForPath += 1;
           }
         } else if (i === mainQuestionIndex) {
-          // Current question - add it
           totalForPath += 1;
-          // If we're answering simple questions, add them as we go
           if (simpleQuestionIndex >= 0) {
-            totalForPath += simpleQuestionIndex; // Simple questions answered so far
+            totalForPath += simpleQuestionIndex;
           }
         } else {
-          // Future question - assume "No" (minimum path) for calculation
           totalForPath += 1;
         }
       } else if (question.type === 'convenience') {
-        // Convenience questions - always 1 each
         totalForPath += 1;
       }
     }
     
-    // Calculate completed questions
     let completed = 0;
-    
-    // Count through answered questions
     for (let i = 0; i < mainQuestionIndex; i++) {
       const question = questions[i];
       if (question.type === 'mainPassion') {
         const answer = answers[i];
         if (answer === '1') {
-          completed += 1 + 5; // Main + all 5 simple questions
+          completed += 1 + 5;
         } else {
-          completed += 1; // Just main question
+          completed += 1;
         }
       } else {
-        completed += 1; // Type or convenience question
+        completed += 1;
       }
-    }
-    
-    // Add progress for current question
+    }  
     if (mainQuestionIndex < questions.length) {
       const currentQuestion = questions[mainQuestionIndex];
       
       if (currentQuestion.type === 'mainPassion' && simpleQuestionIndex >= 0) {
-        // We're answering simple questions
-        completed += simpleQuestionIndex + 1; // +1 for the main question we answered "Yes" to
-      } else if (mainQuestionIndex < answers.length) {
-        // We've answered the current main question
+        completed += simpleQuestionIndex + 1;
         completed += 1;
       }
-      // If we haven't answered the current question yet, don't add to completed
     }
     
-    // Calculate percentage
     const progress = totalForPath > 0 ? (completed / totalForPath) * 100 : 0;
     
     return Math.min(100, Math.max(0, Math.round(progress)));
@@ -268,8 +244,8 @@ export const useQuizStore = create<QuizState>((set, get) => ({
       let questionsToSubtract = 1;
       
       if (question.type === 'mainPassion' && lastAnswer.answer === '1') {
-        newTotalQuestions -= 5; // Subtract 5 simple questions
-        questionsToSubtract = 1 + 5; // Main + 5 simple questions
+        newTotalQuestions -= 5;
+        questionsToSubtract = 1 + 5;
       }
       
       set({
@@ -301,7 +277,7 @@ export const useQuizStore = create<QuizState>((set, get) => ({
         if (prevQuestion.type === 'mainPassion') {
           const prevAnswer = answers[newMainIndex];
           if (prevAnswer === '1') {
-            newSimpleIndex = 4; // Go to last simple question (index 4)
+            newSimpleIndex = 4;
             newQuestionsAnswered = Math.max(0, state.questionsAnswered - (1 + 5));
           } else {
             newSimpleIndex = -1;
@@ -378,7 +354,7 @@ export const useQuizStore = create<QuizState>((set, get) => ({
       if (question.type === 'mainPassion') {
         const answer = state.answers[i];
         if (answer === '1') {
-          questionNumber += 1 + 5; // Main + 5 simple
+          questionNumber += 1 + 5;
         } else {
           questionNumber += 1;
         }
