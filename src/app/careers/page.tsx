@@ -586,7 +586,6 @@ export default function CareersPage() {
 return (
     <main className="min-h-screen bg-gradient-to-b from-background via-background to-background/95 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header - FIXED FOR MOBILE */}
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 md:mb-12 gap-6 md:gap-0">
           <div className="order-2 md:order-1">
             <div className="flex items-center gap-3 mb-3 md:mb-4">
@@ -605,7 +604,6 @@ return (
               Each career is chosen based on market demand, automation resistance, and meaningful impact potential.
             </p>
           </div>
-          {/* Button on mobile - full width, on desktop back to corner */}
           <div className="order-1 md:order-2 ">
             <div className="md:hidden">
     <Button 
@@ -634,8 +632,6 @@ return (
     </div>
           </div>
         </div>
-
-        {/* Stats Bar */}
         <div className="bg-card/40 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-border/50">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             <div className="text-center">
@@ -660,8 +656,6 @@ return (
             </div>
           </div>
         </div>
-
-        {/* Introduction */}
         <div className="mb-12">
           <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-3xl p-8 border border-primary/20">
             <h2 className="text-2xl font-bold text-foreground mb-6">What Makes These Careers "Best"</h2>
@@ -699,8 +693,6 @@ return (
             </div>
           </div>
         </div>
-
-        {/* Career Categories */}
         <div className="space-y-16">
           {careerCategories.map((category, index) => (
             <section key={index} className="scroll-mt-20">
@@ -754,10 +746,6 @@ return (
             </section>
           ))}
         </div>
- 
-        
-        {/* Navigation Footer */}
-        
       </div>
     </main>
   );
