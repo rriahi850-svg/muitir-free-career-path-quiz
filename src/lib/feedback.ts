@@ -1,9 +1,7 @@
-// lib/feedback.ts
 'use client';
 
 export async function logUnsatisfiedResult(code: string, careerTitle: string) {
   try {
-    // Track in Google Analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'negative_feedback', {
         career_title: careerTitle,
@@ -12,8 +10,6 @@ export async function logUnsatisfiedResult(code: string, careerTitle: string) {
         url: window.location.href
       });
     }
-
-    // Also save to localStorage
     if (typeof window !== 'undefined') {
       try {
         const feedbacks = JSON.parse(localStorage.getItem('career_quiz_feedback') || '[]');
